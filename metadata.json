@@ -1,0 +1,8 @@
+{
+  "name": "EV-UL",
+  "description": "Plataforma acadêmica para estudantes de Educação Visual da Universidade Licungo.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
