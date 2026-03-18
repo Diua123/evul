@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>EV-UL | Educação Visual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'ev-blue': '#0088cc',
+              'ev-brown': '#6B3F1F',
+              'ev-dark': '#333333',
+              'ev-text-light': '#cce0f5'
+            },
+            borderRadius: {
+              '3xl': '2rem',
+              '4xl': '2.5rem',
+              '5xl': '3rem',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        overscroll-behavior-y: none;
+        user-select: none;
+      }
+      /* Allow text selection in inputs and textareas */
+      input, textarea {
+        user-select: auto;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 0.4s ease-out forwards;
+      }
+      @keyframes slideUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+      .animate-slideUp {
+        animation: slideUp 0.3s ease-out forwards;
+      }
+      @keyframes zoomIn {
+        from { transform: scale(0.9); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+      .animate-zoomIn {
+        animation: zoomIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      @keyframes swap1 {
+        0%, 100% { transform: translateX(0); z-index: 1; }
+        33% { transform: translateX(32px) scale(0.8); z-index: 0; }
+        66% { transform: translateX(64px) scale(1.2); z-index: 2; }
+      }
+      @keyframes swap2 {
+        0%, 100% { transform: translateX(0); z-index: 2; }
+        33% { transform: translateX(32px) scale(1.2); z-index: 3; }
+        66% { transform: translateX(-32px) scale(0.8); z-index: 0; }
+      }
+      @keyframes swap3 {
+        0%, 100% { transform: translateX(0); z-index: 1; }
+        33% { transform: translateX(-64px) scale(1.2); z-index: 2; }
+        66% { transform: translateX(-32px) scale(0.8); z-index: 0; }
+      }
+      .animate-swap1 { animation: swap1 1.5s infinite ease-in-out; }
+      .animate-swap2 { animation: swap2 1.5s infinite ease-in-out; }
+      .animate-swap3 { animation: swap3 1.5s infinite ease-in-out; }
+    </style>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(registration => {
+          console.log('SW registrado com sucesso:', registration.scope);
+        })
+        .catch(error => {
+          console.log('Falha ao registrar SW:', error);
+        });
+    });
+  }
+</script>
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-BRasf9Fh.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 transition-colors duration-200">
+    <div id="root"></div>
+</body>
+</html>
